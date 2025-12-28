@@ -1,10 +1,78 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uk">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+  <meta charset="UTF-8" />
+  <title>Список задач</title>
+
+  <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Bulma -->
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
+  />
+
+  <style>
+    body {
+      background: #f5f7fa;
+    }
+
+    .task {
+      padding: 0.9rem 1rem;
+      margin-bottom: 0.5rem;
+      border-radius: 8px;
+      background: #ffffff;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+      font-size: 1.05rem;
+      line-height: 1.45;
+    }
+
+    .task.done {
+      color: #9aa0a6;
+      text-decoration: line-through;
+      background: #f0f0f0;
+    }
+  </style>
 </head>
 <body>
-$END$
+
+<section class="section is-small">
+  <div class="container">
+
+    <h1 class="title is-4 has-text-centered">
+      📝 Задачі
+    </h1>
+
+    <!-- Найвищий пріоритет -->
+    <div class="task">
+      Купити продукти
+    </div>
+
+    <div class="task">
+      Відповісти на лист клієнту
+    </div>
+
+    <div class="task">
+      Прочитати документацію Supabase
+    </div>
+
+    <div class="task">
+      Підготувати список ідей для MVP
+    </div>
+
+    <!-- Виконана -->
+    <div class="task">
+      Винести сміття. Ось покрокова інструкція, як користуватись платформою Layer3
+      (app.layer3.xyz), щоб знаходити завдання на створення контенту (або інші завдання) з винагородою
+    </div>
+
+  </div>
+</section>
+
+<script src="view-list.js"></script>
 </body>
 </html>
